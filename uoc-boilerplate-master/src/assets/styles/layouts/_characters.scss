@@ -1,0 +1,35 @@
+div.characters {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: max-content;
+  flex-flow: row;
+  flex-wrap: wrap;
+  flex-basis: content;
+  margin: 20px;
+  img {
+    max-width: 100px;
+    height: auto;
+  }
+  h2 {
+    font-size: medium;
+    max-width: 200px;
+  }
+  h3 {
+    font-weight: lighter;
+    font-size: small;
+  }
+  .actor {
+    padding: 5px;
+    margin: 1px;
+    width: 150px;
+    height: max-content;
+    height: fit-content;
+  }
+  .actor:nth-child(odd) {
+    background-color: $uoc-masterbrand;
+  }
+  .actor:nth-child(even) {
+    background-color: $uoc-bg;
+  }
+}

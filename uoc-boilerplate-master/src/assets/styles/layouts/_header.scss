@@ -1,0 +1,112 @@
+@supports (display: grid) {
+  header {
+    display: grid;
+    padding: 20px;
+    column-gap: 10px;
+    row-gap: 1em;
+    text-align: center;
+  }
+
+  header ul {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  header li a {
+    display: block;
+    color: $uoc-corporate;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  header li a:hover {
+    background-color: aqua;
+  }
+  @media (min-width: 550px) {
+    header {
+      grid-template-columns: 1fr 1fr;
+    }
+    header img {
+      left: 10px;
+      max-width: 200px;
+      height: auto;
+    }
+    header li {
+      float: right;
+    }
+  }
+  @media (min-width: 0px) and (max-width: 550px) {
+    header {
+      grid-template-columns: 1fr;
+    }
+    header img {
+      margin: auto;
+      max-width: 200px;
+      height: auto;
+    }
+    header li {
+      float: none;
+    }
+  }
+}
+
+@supports (display: grid) {
+  footer {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 1em;
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer img {
+    max-width: 200px;
+    height: auto;
+  }
+
+  footer ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  footer li {
+    border-radius: 10px;
+    margin: 0;
+  }
+
+  footer li a {
+    display: block;
+    color: $uoc-corporate;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+
+  footer li a:hover {
+    background-color: aqua;
+  }
+
+  @media (min-width: 550px) {
+    footer {
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    footer img {
+      left: 10px;
+    }
+  }
+
+  @media (min-width: 0) and (max-width: 550) {
+    footer {
+      grid-template-rows: 1fr 1fr 1fr;
+      justify-items: center;
+    }
+  }
+}
